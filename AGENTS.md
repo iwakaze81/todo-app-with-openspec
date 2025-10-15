@@ -18,3 +18,6 @@ Use `@/openspec/AGENTS.md` to learn:
 Keep this managed block so 'openspec update' can refresh the instructions.
 
 <!-- OPENSPEC:END -->
+
+## Codex補足
+- PR本文を作成・提案する際は `.github/pull_request_template.md` の構成に従ってください。
