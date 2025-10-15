@@ -10,6 +10,9 @@ make check-fvm
 
 # 2. Flutter SDK の取得と依存関係解決をまとめて実行
 make setup
+
+# 3. 以後の依存解決はショートカットを利用
+make pub-get
 ```
 
 > `make check-fvm` / `make setup` 実行時に Flutter SDK のダウンロードが必要になるため、ネットワークに接続していることを確認してください。ダウンロードに失敗した場合はエラーメッセージに従って再実行してください。
@@ -17,10 +20,15 @@ make setup
 ## 主なコマンド
 
 ```bash
-make format   # Dart/Flutter コードのフォーマット
-make analyze  # 静的解析
-make test     # テスト実行
+make format              # Dart/Flutter コードのフォーマット
+make analyze             # 静的解析
+make test                # テスト実行
+make pub-get             # FVM を介した依存解決
+make build-runner        # コード生成を単発実行（--delete-conflicting-outputs 付き）
+make build-runner-watch  # コード生成を監視モードで実行
 ```
+
+`build_runner` が生成する `*.g.dart` や `*.freezed.dart` などのファイルはリポジトリにコミットする運用です。生成物に差分が出た場合は忘れずにレビュー・コミットしてください。
 
 ## プロジェクト構成 (抜粋)
 
