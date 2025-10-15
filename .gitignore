@@ -1,0 +1,40 @@
+# Flutter build outputs
+build/
+.dart_tool/
+.packages
+.pub-cache/
+.flutter-plugins
+.flutter-plugins-dependencies
+.melos_tool/
+
+# IDE directories
+.idea/
+.vscode/
+android/.gradle/
+android/local.properties
+android/.settings/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/Generated.xcconfig
+ios/ServiceDefinitions.json
+ios/Runner/GeneratedPluginRegistrant.*
+macos/Flutter/GeneratedPluginRegistrant.*
+macos/Flutter/ephemeral/
+windows/flutter/ephemeral/
+linux/flutter/ephemeral/
+
+# Platform builds
+ios/Pods/
+macos/Pods/
+*.iml
+
+# FVM directories
+.fvm/
+
+# Generated files
+coverage/
+.dart_tool/**
+**/*.log
+
+# Misc
+.DS_Store
