@@ -22,6 +22,18 @@ make analyze  # 静的解析
 make test     # テスト実行
 ```
 
+## CI
+
+GitHub Actions で `flutter analyze` と `flutter test` を実行するワークフローを用意しています。
+
+- 対象ブランチ: `main`
+  - `push` イベント
+  - `pull_request` イベント
+- `.github/actions/setup-flutter` が `.fvmrc` を読み込み、Flutter 3.35.6 (stable) を自動セットアップします。
+- 依存取得 (`flutter pub get`) 後に解析とテストを行い、失敗するとワークフロー全体が失敗します。
+
+ローカルでも `.fvmrc` と同じバージョンの Flutter を利用することで、CI と同一環境で検証できます。
+
 ## プロジェクト構成 (抜粋)
 
 ```
