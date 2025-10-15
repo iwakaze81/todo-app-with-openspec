@@ -1,5 +1,7 @@
 # OpenSpec Instructions
 
+**All responses related to this project MUST be written in Japanese. 本プロジェクトに関するAIアシスタントの回答は必ず日本語で記載してください。**
+
 Instructions for AI coding assistants using OpenSpec for spec-driven development.
 
 ## TL;DR Quick Checklist

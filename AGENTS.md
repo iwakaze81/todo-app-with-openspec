@@ -1,7 +1,9 @@
 <!-- OPENSPEC:START -->
-# OpenSpec Instructions
+# OpenSpec Instructions / オープンスペック手順
 
-These instructions are for AI assistants working in this project.
+These instructions are for AI assistants working in this project. / このプロジェクトで作業するAIアシスタント向けの手順です。
+
+**All responses for this project MUST be written in Japanese. / 本プロジェクトに関する回答は必ず日本語で行ってください。**
 
 Always open `@/openspec/AGENTS.md` when the request:
 - Mentions planning or proposals (words like proposal, spec, change, plan)
