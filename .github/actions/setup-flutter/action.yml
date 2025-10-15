@@ -1,0 +1,39 @@
+name: Setup Flutter via .fvmrc
+
+description: Configure Flutter using the version specified in the repository's .fvmrc file.
+
+inputs:
+  fvmrc-path:
+    description: Path to the .fvmrc file relative to the repository root
+    default: .fvmrc
+    required: false
+
+runs:
+  using: composite
+  steps:
+    - name: Read Flutter version from .fvmrc
+      id: read-version
+      shell: bash
+      run: |
+        set -euo pipefail
+        fvmrc_path="${{ inputs.fvmrc-path }}"
+        if [ ! -f "$fvmrc_path" ]; then
+          echo "指定された .fvmrc (${fvmrc_path}) が見つかりません" >&2
+          exit 1
+        fi
+        version=$(python3 -c 'import json, sys; data=json.load(open(sys.argv[1])); print(data.get("flutter", ""))' "$fvmrc_path")
+        if [ -z "$version" ]; then
+          echo ".fvmrc の flutter バージョンが空、または flutter キーが存在しません" >&2
+          exit 1
+        fi
+        echo "flutter-version=$version" >> "$GITHUB_OUTPUT"
+
+    - name: Setup Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: ${{ steps.read-version.outputs.flutter-version }}
+        channel: stable
+
+    - name: Show Flutter version
+      shell: bash
+      run: flutter --version
