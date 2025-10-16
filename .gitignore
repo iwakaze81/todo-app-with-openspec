@@ -9,7 +9,9 @@ build/
 
 # IDE directories
 .idea/
-.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
 android/.gradle/
 android/local.properties
 android/.settings/
