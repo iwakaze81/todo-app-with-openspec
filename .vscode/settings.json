@@ -1,0 +1,22 @@
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "Dart-Code.dart-code"
+  },
+  "dart.lineLength": 100,
+  "dart.showTodos": true,
+  "search.exclude": {
+    "**/.fvm/**": true
+  },
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "pubspec.yaml": "pubspec.lock, .metadata, .packages, .flutter-plugins, .flutter-plugins-dependencies",
+    "analysis_options.yaml": "analysis_options.*.yaml",
+    "README.md": "README.*.md"
+  },
+  "dart.flutterSdkPath": ".fvm/versions/3.35.6"
+}
